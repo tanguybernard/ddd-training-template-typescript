@@ -1,19 +1,14 @@
 import connection from "../../../../../tests/utils/connection";
 import RentCar from "./rent-car";
-import LeasingFactory from "../../../leasing-factory";
+import LeasingFactory from "../../../../leasing/leasing-factory";
 import {v4 as uuidv4} from "uuid";
 import {AppDataSource} from "../../../../data-source";
-import CarDto, {LeasingStatus} from "../../../infrastructure/postgres/car/car-dto";
-import DriverDto from "../../../infrastructure/postgres/driver/driver-dto";
-import DriverId from "../domain/driver-id";
-import CarId from "../../../shared-kernel/domain/car-id";
-import {DomainEvents} from "../../../../shared-kernel/domain-event-dispatching/domain-events";
-import CarRentedEventHandler from "../../car/application/event-handlers/car-rented-event-handler";
-import CarPgRepository from "../../../infrastructure/postgres/car/car-repository";
-import CarDao from "../../../infrastructure/postgres/car/car-dao";
-import CarRentedEvent from "../domain/events/car-rented-event";
+import CarDto, {LeasingStatus} from "../../../../leasing/infrastructure/postgres/car/car-dto";
+import DriverDto from "../../../../leasing/infrastructure/postgres/driver/driver-dto";
+import DriverId from "../../../../leasing/application-core/driver/domain/driver-id";
+import CarId from "../../../../leasing/shared-kernel/domain/car-id";
 
-import "../../../subscribers"
+import "../../../../leasing/subscribers"
 
 
 //FIX its an integration test, real database even if tis memory ?

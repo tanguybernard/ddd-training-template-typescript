@@ -1,0 +1,12 @@
+[
+
+  {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "licenseStartDate": "2022-02-23",
+    "licenseId": "edfs23DfdusDFDFbfsdue",
+    "licenseType": ["B", "A"]
+  }
+
+]

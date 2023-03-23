@@ -16,6 +16,14 @@ Add car, integration event  => consumer leasing BC to be rented
 See: _CarReadyToRentIntegrationEvent_
 
 
+
+## Bounded context
+
+- Driver Registration
+- Car Registration
+- Leasing
+
+
 ## Skeleton
 
 
@@ -109,3 +117,20 @@ RabbitMQ
 https://dev.to/omardiaa48/microservices-with-expressjs-and-rabbitmq-34dk
 
 https://geshan.com.np/blog/2021/07/rabbitmq-docker-nodejs/
+
+https://sharmilas.medium.com/get-started-with-rabbitmq-in-node-js-1adb18d019d0
+
+https://github.com/stemmlerjs/white-label/blob/master/src/modules/notification/subscribers/index.ts
+
+
+ACL
+
+https://stackoverflow.com/questions/909264/ddd-anti-corruption-layer-how-to
+
+https://dev.to/asarnaout/the-anti-corruption-layer-pattern-pcd
+
+ACL many implems
+
+https://www.linkedin.com/pulse/design-patterns-app-refactoring-microservices-sharan-gowde/
+
+Link to EAI (enterprise application integration) : https://www.piloter.org/techno/support/EAI.htm

@@ -1,7 +1,7 @@
 import {Request, RequestHandler, Response} from "express";
 import {body, validationResult} from "express-validator";
-import {CreateDriver} from "../../application-core/driver/application/create-driver";
-import {CreateDriverDto} from "../../application-core/driver/application/create-driver-dto";
+import {CreateDriver} from "../../../driver-registration/application-core/driver/application/create-driver";
+import {CreateDriverDto} from "../../../driver-registration/application-core/driver/application/create-driver-dto";
 
 export class DriverController{
 

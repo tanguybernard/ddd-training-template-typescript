@@ -1,7 +1,7 @@
 import {CreateDriver} from "./create-driver";
 import {CreateDriverDto} from "./create-driver-dto";
-import {InMemoryDriverRepository} from "../../ports/stubs/in-memory-driver-repository";
-import DriverRepository from "../../ports/driver-repository";
+import {InMemoryDriverRepository} from "../../../../leasing/application-core/ports/stubs/in-memory-driver-repository";
+import DriverRepository from "../../../../leasing/application-core/ports/driver-repository";
 
 describe(`${CreateDriver.name}`, () => {
     let useCase: CreateDriver;

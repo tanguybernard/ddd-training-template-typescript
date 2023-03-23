@@ -1,9 +1,9 @@
-import DriverId from "../domain/driver-id";
-import DriverRepository from "../../ports/driver-repository";
+import DriverId from "../../../../leasing/application-core/driver/domain/driver-id";
+import DriverRepository from "../../../../leasing/application-core/ports/driver-repository";
 import {DomainEvents} from "../../../../shared-kernel/domain-event-dispatching/domain-events";
-import CarRepository from "../../car/ports/car-repository";
-import CarId from "../../../shared-kernel/domain/car-id";
-import CarService from "../domain/services/car-service";
+import CarRepository from "../../../../leasing/application-core/car/ports/car-repository";
+import CarId from "../../../../leasing/shared-kernel/domain/car-id";
+import CarService from "../../../../leasing/application-core/driver/domain/services/car-service";
 
 
 export default class RentCar {
