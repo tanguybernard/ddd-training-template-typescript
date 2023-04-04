@@ -15,11 +15,6 @@ export default class LeasingFactory {
         return new RentCar(new CarService(), this.driverRepository(), this.carRepository());
     }
 
-    //TODO move to BC driver registration
-    /*public static useCaseCreateDriver(): CreateDriver {
-        return new CreateDriver(this.driverRepository());
-    }*/
-
 
     public static carRepository(): CarRepository{
         return new CarPgRepository(CarDao)

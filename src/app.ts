@@ -2,7 +2,7 @@ import express from 'express'
 import * as http from "http";
 import {Server} from "http";
 import hello from './car-registration/presentation/rest/hello-routes';
-import driver from './leasing/presentation/rest/driver-router';
+import driver from './driver-registration/presentation/rest/driver-router';
 
 
 export function initServer(): Server {

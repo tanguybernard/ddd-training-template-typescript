@@ -1,8 +1,8 @@
 import {CreateDriverDto} from "./create-driver-dto";
-import DriverRepository from "../../../../leasing/application-core/ports/driver-repository";
-import Driver from "../../../../leasing/application-core/driver/domain/driver";
 import {v4 as uuidv4} from "uuid";
-import DriverId from "../../../../leasing/application-core/driver/domain/driver-id";
+import DriverRepository from "../../ports/driver-repository";
+import DriverId from "../domain/model/driver-id";
+import {Driver} from "../domain/model/driver";
 
 
 export class CreateDriver {
