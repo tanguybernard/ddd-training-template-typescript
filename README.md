@@ -129,8 +129,43 @@ https://stackoverflow.com/questions/909264/ddd-anti-corruption-layer-how-to
 
 https://dev.to/asarnaout/the-anti-corruption-layer-pattern-pcd
 
+https://awesome-architecture.com/cloud-design-patterns/anti-corruption-layer-pattern/#videos
+
+----------------
+https://tpierrain.blogspot.com/2020/04/adapters-are-true-heralds-of-ddd.html
+
+
+An anti-corruption layer can be implemented in various forms:
+- external gateway/service/intermediate API
+- dedicated in-middle database (for old systems)
+- or just an in-proc adapter within a hexagonal architecture.
+
+
+The ACL-Adapter of your hexagonal architecture will therefore very often have to call these multiple sources to be able to offer a consolidated vision to your domain.
+
+For instance:
+
+- Calling a first service of another BC to recover incomplete data
+- Translating or adapting part of its response into another data structure ready to be used to forge an intelligible request to another external service (often belonging to the same second BC but not always)
+- Sending this second request to the second system or endpoint
+- Getting the result of this second call and adapt the whole set to produce a response that will finally suit your own Hexagon with its Domain-level semantic
+
+----------------
+
+
+An Anti-Corruption Layer is a layer (it can be a package, a class, or an entire system) that lives in between our client and the external application.
+
+----------------
+
+
 ACL many implems
 
 https://www.linkedin.com/pulse/design-patterns-app-refactoring-microservices-sharan-gowde/
 
 Link to EAI (enterprise application integration) : https://www.piloter.org/techno/support/EAI.htm
+
+
+
+Clean Archi
+
+https://leandeep.com/clean-architecture/
