@@ -3,8 +3,6 @@ import Driver from "../../../application-core/driver/domain/driver";
 import DriverId from "../../../application-core/driver/domain/driver-id";
 import {DriverRegistrationFacadeInterface} from "./driver-registration-facade-interface";
 import {DriverAccessTranslator} from "./driver-access-translator";
-import {DriverAdapter} from "./driver-adapter";
-
 
 class DriverRegistrationFacade {
 
@@ -13,7 +11,8 @@ class DriverRegistrationFacade {
 export class DriverRepositoryImplem implements DriverRepository {
 
 
-    constructor(public driverAdapter: DriverAdapter) {
+    constructor(private driverRegistrationFacade: DriverRegistrationFacadeInterface,
+                private driverAccessTranslator: DriverAccessTranslator) {
     }
 
 
@@ -26,7 +25,9 @@ export class DriverRepositoryImplem implements DriverRepository {
     }
 
     findByLicense(license: string): Promise<Driver> {
-        return Promise.resolve(this.driverAdapter.getDriverByLicense(license));
+        //const driver: Container = this.driverRegistrationFacade
+        const driverContainer = this.driverRegistrationFacade.getDriverAccess(license)
+        return Promise.resolve(this.driverAccessTranslator.translate(driverContainer));
     }
 
     update(driver: Driver): Promise<void> {
